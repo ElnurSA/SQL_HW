@@ -1,0 +1,26 @@
+create TABLE Teachers(
+    [Id] int,
+    [Name] NVARCHAR,
+    [Surname] NVARCHAR,
+    [Email] NVARCHAR,
+    [Age] int
+)
+
+create TABLE Students(
+    [Id] int,
+    [Fullname] NVARCHAR,
+    [Address] NVARCHAR
+)
+INSERT into Teachers([Id], [Name], [Surname], [Email], [Age])
+VALUES (1, 'Ali', 'Aliyev', 'ali@mail.ru', 30)
+
+
+SELECT * from Teachers
+
+SELECT * from Students
+
+SELECT count(*) as [Student Count] from Students
+
+select [Name], [Surname] FROM Teachers WHERE age>20
+
+select * FROM Teachers WHERE CONTAINS(Email, "c")
